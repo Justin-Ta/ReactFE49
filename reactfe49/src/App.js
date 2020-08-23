@@ -9,6 +9,7 @@ import Styling from './StylingComponent/Styling';
 import RenderWithState from './RenderWithState/RenderWithState';
 import ChangeCar from './RenderWithState/ChangeCar/ChangeCar';
 import RenderWithMap from './RenderWithMap/RenderWithMap';
+import BaiTapThucHanhLayout from './components/BaiTapThucHanhLayout/BaiTapThucHanhLayout';
 
 
 
@@ -16,7 +17,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <RenderWithMap />
+        <BaiTapThucHanhLayout/>
       </header>
     </div>
   );
