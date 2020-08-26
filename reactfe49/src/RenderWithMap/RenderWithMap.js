@@ -7,7 +7,18 @@ export default class RenderWithMap extends Component {
         {id:3,name:'Htc m10',price:2000},
     ]
 
-    renderProduct= ()=> {
+    renderTable=()=>{
+        return this.productList.map((item, index)=>{
+            return <tr key={index}>
+                <td>{item.id}</td>
+                <td>{item.name}</td>
+                <td>{item.price}</td>
+                <td><button className="btn-danger">Delete</button></td>
+            </tr>
+        })
+    }
+
+    renderProduct=()=>{
     // let content=[];
     // for (let i=0; i<= this.productList.length; i++){
     //         let product= this.productList[i];
@@ -38,12 +49,17 @@ export default class RenderWithMap extends Component {
     return arrJSXProduct;
     }
     
+    
     render() {
         return (
-            <div className="row">
-                {this.renderProduct()}
-            </div>
-        )
+          <div className="container">
+            {/* <div className="row">{this.renderProduct()}</div> */}
+            <h3 className="text-center">Danh sach san pham</h3>
+            <table>
+                {this.renderTable()}
+            </table>
+          </div>
+        );
     }
 }
 
