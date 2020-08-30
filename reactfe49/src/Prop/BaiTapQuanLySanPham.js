@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import SanPham from './SanPham'
 
 export default class BaiTapQuanLySanPham extends Component {
 
@@ -10,22 +11,7 @@ state={
                    return this.props.mangSP?.map((sp, index) => {
                      return (
                        <div key="{index}" className="col-4">
-                         <div className="card text-dark">
-                           <img
-                             className="card-img-top img-fluid"
-                             src={sp.hinhAnh}
-                             style={{ height: 300 }}
-                             alt
-                           />
-                           <div className="card-body">
-                             <h4 className="card-title">{sp.tenSP}</h4>
-                             <p className="card-text">{sp.gia}</p>
-                             <button className="btn btn-primary" onClick={()=>{this.xemChiTiet(sp)
-                             }}>
-                               Chi Tiết
-                             </button>
-                           </div>
-                         </div>
+                         <SanPham sp={sp} xemChiTiet={this.xemChiTiet}/>
                        </div>
                      );
                    });

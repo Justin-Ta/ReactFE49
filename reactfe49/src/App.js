@@ -13,6 +13,7 @@ import BaiTapThucHanhLayout from './components/BaiTapThucHanhLayout/BaiTapThucHa
 import BaiTapRenderPhim from './RenderWithMap/BaiTapRenderPhim';
 import DemoProp from './Prop/DemoProp';
 import BaiTapQuanLySanPham from './Prop/BaiTapQuanLySanPham';
+import BaiTapGioHang from './Prop/BaiTapGioHang/BaiTapGioHang';
 
 
 
@@ -32,7 +33,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <BaiTapQuanLySanPham mangSP={mangSP}/>
+        {/* <BaiTapQuanLySanPham mangSP={mangSP}/> */}
+        <BaiTapGioHang/>
       </header>
     </div>
   );
