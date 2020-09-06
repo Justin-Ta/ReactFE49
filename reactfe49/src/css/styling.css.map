@@ -1,9 +1,9 @@
 {
     "version": 3,
-    "mappings": "AAAA,AAAA,WAAW,CAAA;EACP,gBAAgB,EAAE,oBAAoB;EACtC,eAAe,EAAE,IAAI;EACrB,KAAK,EAAE,IAAI;EACX,UAAU,EAAE,MAAM;CACrB;;AACD,AAAA,YAAY,CAAA;EACR,UAAU,EAAE,kBAAkB;CACjC",
+    "mappings": "AAEA,AAAA,MAAM,CAAA;EACF,KAAK,EAHD,KAAK;EAIT,OAAO,EAAE,IAAI;EACb,gBAAgB,EAAE,KAAK;CAC1B",
     "sources": [
-        "../RenderWithMap/styling.scss"
+        "../StylingComponent/Styling.scss"
     ],
     "names": [],
-    "file": "styling.css"
+    "file": "Styling.css"
 }

@@ -1,0 +1,14 @@
+.productGlasses {
+  position: relative;
+}
+
+.productGlasses .form-group {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.productGlasses .form-group button {
+  color: black;
+  border: 2px solid black;
+}
+/*# sourceMappingURL=StylingGlass.module.css.map */

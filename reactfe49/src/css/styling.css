@@ -1,11 +1,6 @@
-.background {
-  background-image: url("./avanger.jpg");
-  background-size: 100%;
-  width: 100%;
-  min-height: 1000px;
+.title {
+  color: green;
+  padding: 15px;
+  background-color: black;
 }
-
-.background2 {
-  background: rgba(0, 0, 0, 0.5);
-}
-/*# sourceMappingURL=styling.css.map */
+/*# sourceMappingURL=Styling.css.map */
