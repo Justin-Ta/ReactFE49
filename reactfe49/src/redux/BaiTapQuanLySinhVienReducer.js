@@ -1,4 +1,4 @@
-import { act } from "react-dom/test-utils";
+// import { act } from "react-dom/test-utils";
 import {THEM_SINH_VIEN } from "./type/QuanLySinhVienType";
 
 const initialState = {

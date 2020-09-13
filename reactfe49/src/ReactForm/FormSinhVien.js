@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import {connect} from "react-redux";
 import swal from 'sweetalert2';
-import { THEM_SINH_VIEN } from '../redux/type/QuanLySinhVienType';
+import { themSinhVienAction } from '../redux/action/QuanLySinhVienAction';
 class FormSinhVien extends Component {
    state={
        values:{
@@ -9,14 +9,12 @@ class FormSinhVien extends Component {
         tenSinhVien:"",
         soDienThoai:"",
         email:"",
-        errMaSinhVien:"",
        },
        errors:{
         maSinhVien:"",
         tenSinhVien:"",
         soDienThoai:"",
         email:"",
-        errMaSinhVien:"",
        }
        
    }
@@ -48,34 +46,41 @@ class FormSinhVien extends Component {
     });
    }
 
-   handleSubmit=(event)=>{
+   handleSubmit= (event) => {
     event.preventDefault(); //Chặn sự kiện submit của trình duyệt
-    let valid= true;
-    for (let key in this.state.value){
-        if (this.state.value[key].trim()===""){
-            valid= false;
-        }
-    }
+    let valid = true;
 
-    for (let key in this.state.errors) {
-        if (this.state.errors[key].trim()!==""){
-            valid= false;
-        }
-    }
-    if (!valid){
-        swal.fire(
-            'Thất bại?',
-            'Dữ liệu không hợp lệ',
-            'error'
-          )
-          return ;
-        
-    }
-    const action= themSinhVienAction(this.state.values)
+    for(let key in this.state.values) {
+      if(this.state.values[key].trim() === ''){
+          valid = false;
+      }
+  }
+    for(let key in this.state.errors){
+      if(this.state.errors[key].trim() !==''){
+          valid = false;
+      }
+  }
+    console.log("Valid", valid );
+
+    if(!valid){
+      swal.fire(
+          'Thất bại',
+          'Dữ liệu không hợp lệ !',
+          'error'
+        )
+      return ;
+  }
+
+    const action= themSinhVienAction(this.state.values);
 
  
     // Dùng props.dispatch có sẵn khi liên kết với redux sẽ có props này => dispatch action lên reducer
     this.props.dispatch(action);
+    swal.fire(
+        'Thành công',
+        'Thêm sinh viên thành công !',
+        'success'
+      )
    }
     render() {
         return (
