@@ -16,6 +16,7 @@ import BaiTapQuanLySanPham from './Prop/BaiTapQuanLySanPham';
 import BaiTapGioHang from './Prop/BaiTapGioHang/BaiTapGioHang';
 import BaiTapThuKinh from './components/BaiTapThucHanhThuKinh/BaiTapThuKinh';
 import BaiTapGioHangRedux from './components/BaiTapRedux/BaiTapGioHangRedux';
+import BaiTapOanTuXi from './components/BaiTapOanTuXi/BaiTapOanTuXi';
 
 
 
@@ -38,7 +39,8 @@ function App() {
         {/* <BaiTapQuanLySanPham mangSP={mangSP}/> */}
         {/* <BaiTapGioHang/> */}
         {/* <BaiTapThuKinh/> */}
-        <BaiTapGioHangRedux/>
+        {/* <BaiTapGioHangRedux/> */}
+        <BaiTapOanTuXi/>
       </header>
     </div>
   );
