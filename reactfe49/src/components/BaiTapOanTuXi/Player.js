@@ -9,7 +9,9 @@ class Player extends Component {
           className="col mx-2"
           style={{ border: "2px solid white", backgroundColor: "white" }}
         >
-          <img src={luaChon.hienThi} className="img-fluid" alt="" />
+          <img src={luaChon.hienThi} className="img-fluid" onClick={()=>{
+         this.props.playerChoice(luaChon);
+      }}/>
         </div>
     });
   };
@@ -33,7 +35,7 @@ const mapDispatchToProps=(dispatch)=>{
     playerChoice:(choice)=>{
       const action={
         type: "LUA_CHON",
-        choice: choice
+        luaChon: choice
     }
     //Dùng hàm dispatch đưa nội dung lên redux (Reducer)
     dispatch(action);
@@ -46,4 +48,4 @@ const mapStateToProps= (state)=>{
     PlayersChoice: state.GamePlay123Reducer.PlayersChoice,
   }
 }
-export default connect(mapStateToProps)(Player)
+export default connect(mapStateToProps,mapDispatchToProps)(Player)

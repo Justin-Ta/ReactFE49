@@ -41,8 +41,8 @@ function App() {
         {/* <BaiTapGioHang/> */}
         {/* <BaiTapThuKinh/> */}
         {/* <BaiTapGioHangRedux/> */}
-        {/* <BaiTapOanTuXi/> */}
-        <DanhSachSinhVien/>
+        <BaiTapOanTuXi/>
+        {/* <DanhSachSinhVien/> */}
       </header>
     </div>
   );
