@@ -1,2 +1,0 @@
-https://github.com/Justin-Ta/ReactFE49
-reactfe49/src/components/BaiTapThucHanhThuKinh/

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {connect} from "react-redux";
+import { chinhSuaSinhVienAction, xoaSinhVienAction } from '../redux/action/QuanLySinhVienAction';
 import FormSinhVien from './FormSinhVien';
 
 class DanhSachSinhVien extends Component {
@@ -24,8 +25,12 @@ class DanhSachSinhVien extends Component {
                                     <td>{sinhVien.email}</td>
                                     <td>{sinhVien.soDienThoai}</td>
                                     <td>
-                                        <button className="btn btn-primary mr-2">Chỉnh Sửa</button>
-                                        <button className="btn btn-danger mr-2">Xóa</button>
+                                        <button className="btn btn-primary mr-2" onClick={()=>{
+                                            //Dispatch thông tin sinh viên, cập nhật lại state
+                                            let action= chinhSuaSinhVienAction(sinhVien);
+                                            this.props.dispatch(action);
+                                        }}>Chỉnh Sửa</button>
+                                        <button className="btn btn-danger mr-2" >Xóa</button>
                                     </td>
                                 </tr>
                             })}

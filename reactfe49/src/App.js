@@ -18,6 +18,7 @@ import BaiTapThuKinh from './components/BaiTapThucHanhThuKinh/BaiTapThuKinh';
 import BaiTapGioHangRedux from './components/BaiTapRedux/BaiTapGioHangRedux';
 import BaiTapOanTuXi from './components/BaiTapOanTuXi/BaiTapOanTuXi';
 import DanhSachSinhVien from './ReactForm/DanhSachSinhVien'
+import LifeCycle from './LifeCycle/LifeCycle';
 
 
 
@@ -41,8 +42,9 @@ function App() {
         {/* <BaiTapGioHang/> */}
         {/* <BaiTapThuKinh/> */}
         {/* <BaiTapGioHangRedux/> */}
-        <BaiTapOanTuXi/>
-        {/* <DanhSachSinhVien/> */}
+        {/* <BaiTapOanTuXi/> */}
+        <DanhSachSinhVien/>
+        {/* <LifeCycle/> */}
       </header>
     </div>
   );
